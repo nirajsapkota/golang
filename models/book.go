@@ -1,9 +1,9 @@
 package models
 
 type Book struct {
-	ID     int
-	Title  string
-	Author string
+	ID     int    `json:"id" binding:"required"`
+	Title  string `json:"title" binding:"required"`
+	Author string `json:"author" binding:"required"`
 }
 
 type CreateBookRequest struct {

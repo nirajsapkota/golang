@@ -21,8 +21,8 @@ func CreateBook(c *gin.Context) {
 	book := models.Book{ID: count, Title: req.Title, Author: req.Author}
 	books = append(books, book)
 
-	count += 1
 	c.JSON(http.StatusOK, gin.H{"message": fmt.Sprintf("Created Book with ID %v", count)})
+	count += 1
 }
 
 func ReadBooks(c *gin.Context) {
